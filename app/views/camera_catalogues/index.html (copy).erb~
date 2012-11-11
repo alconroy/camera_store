@@ -1,0 +1,48 @@
+<div class="center_content">
+
+  	<div class="center_title_bar">Latest Products</div>
+
+<% @camera_catalogues.each do |camera_catalogue| %>
+    
+    	<div class="prod_box">
+        	<div class="top_prod_box"></div>
+            <div class="center_prod_box">            
+                 <div class="product_title"><a href="details.html"><%= camera_catalogue.model_description %></a></div>
+                 <div class="product_img"><a href="details.html"><%= link_to (image_tag camera_catalogue.product_image),camera_catalogue %></a></div>
+                 <div class="prod_price"><span class="reduce">350$</span> <span class="price"><%=number_to_currency(camera_catalogue.price, :unit =>"&euro;")%> </span></div>                        
+            </div>
+            <div class="bottom_prod_box"></div>             
+            <div class="prod_details_tab">
+            <a href="#" title="header=[Add to cart] body=[&nbsp;] fade=[on]"><img src="assest/cart.gif" alt="" title="" border="0" class="left_bt" /></a>
+            <a href="#" title="header=[Specials] body=[&nbsp;] fade=[on]"><img src="assest/favs.gif" alt="" title="" border="0" class="left_bt" /></a>
+            <a href="#" title="header=[Gifts] body=[&nbsp;] fade=[on]"><img src="assets/favorites.gif" alt="" title="" border="0" class="left_bt" /></a>           
+            <a href="details.html" class="prod_details">details</a>            
+            </div>                     
+        </div>
+    
+
+
+
+<% @camera_catalogues.each do |camera_catalogue| %>
+  <tr>
+    <td><%= camera_catalogue.brand %></td>
+    <td><%= camera_catalogue.camera_type %></td>
+    <td><%= camera_catalogue.megapixels_range %></td>
+    <td><%= camera_catalogue.optical_zoom %></td>
+    <td><%= camera_catalogue.lcd_screen_size %></td>
+    <td><%= camera_catalogue.colour %></td>
+    <td><%= camera_catalogue.price %></td>
+    <td><%= camera_catalogue.model_code %></td>
+    <td><%= camera_catalogue.model_description %></td>
+    <td><%= camera_catalogue.product_image %></td>
+    <td><%= camera_catalogue.stock_level %></td>
+    <td><%= link_to 'Show', camera_catalogue %></td>
+    <td><%= link_to 'Edit', edit_camera_catalogue_path(camera_catalogue) %></td>
+    <td><%= link_to 'Destroy', camera_catalogue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Camera catalogue', new_camera_catalogue_path %>

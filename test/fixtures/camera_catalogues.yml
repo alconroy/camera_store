@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  brand: MyString
+  camera_type: MyString
+  megapixels_range: MyString
+  optical_zoom: MyString
+  lcd_screen_size: MyString
+  colour: MyString
+  price: 9.99
+  model_code: MyString
+  model_description: MyText
+  product_image: MyString
+  stock_level: 1
+
+two:
+  brand: MyString
+  camera_type: MyString
+  megapixels_range: MyString
+  optical_zoom: MyString
+  lcd_screen_size: MyString
+  colour: MyString
+  price: 9.99
+  model_code: MyString
+  model_description: MyText
+  product_image: MyString
+  stock_level: 1

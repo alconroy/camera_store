@@ -1,0 +1,2 @@
+module CameraCataloguesHelper
+end

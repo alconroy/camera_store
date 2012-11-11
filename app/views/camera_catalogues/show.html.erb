@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Brand:</b>
+  <%= @camera_catalogue.brand %>
+</p>
+
+<p>
+  <b>Camera type:</b>
+  <%= @camera_catalogue.camera_type %>
+</p>
+
+<p>
+  <b>Megapixels range:</b>
+  <%= @camera_catalogue.megapixels_range %>
+</p>
+
+<p>
+  <b>Optical zoom:</b>
+  <%= @camera_catalogue.optical_zoom %>
+</p>
+
+<p>
+  <b>Lcd screen size:</b>
+  <%= @camera_catalogue.lcd_screen_size %>
+</p>
+
+<p>
+  <b>Colour:</b>
+  <%= @camera_catalogue.colour %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @camera_catalogue.price %>
+</p>
+
+<p>
+  <b>Model code:</b>
+  <%= @camera_catalogue.model_code %>
+</p>
+
+<p>
+  <b>Model description:</b>
+  <%= @camera_catalogue.model_description %>
+</p>
+
+<p>
+  <b>Product image:</b>
+  <%= @camera_catalogue.product_image %>
+</p>
+
+<p>
+  <b>Stock level:</b>
+  <%= @camera_catalogue.stock_level %>
+</p>
+
+
+<%= link_to 'Edit', edit_camera_catalogue_path(@camera_catalogue) %> |
+<%= link_to 'Back', camera_catalogues_path %>
