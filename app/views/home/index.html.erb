@@ -10,7 +10,7 @@
     	<div class="prod_box">
         	<div class="top_prod_box"></div>
             <div class="center_prod_box">            
-                 <div class="product_title"><%= link_to (camera_catalogue.model_description, :id => 'camera_catalogue.id') %></div>
+                 <div class="product_title"><a href="details.html"><%= camera_catalogue.model_description %></a></div>
                   <div class="product_img"><a href="details.html"><%= link_to (image_tag camera_catalogue.product_image),camera_catalogue %></a></div>
                 <div class="prod_price"><span class="reduce">€350</span> <span class="price"><%=number_to_currency(camera_catalogue.price, :unit => "&euro;")%></span></div>                        
             </div>

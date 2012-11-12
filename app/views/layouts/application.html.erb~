@@ -76,9 +76,9 @@
                          <li class="divider"></li>
                          <li><a href="#" class="nav4">My account</a></li>
                          <li class="divider"></li>
-                         <li><a href="#" class="nav4">Sign Up</a></li>
+                         <li><a href="users/sign_up" class="nav4">Sign Up</a></li>
                          <li class="divider"></li>                         
-                         <li><a href="#" class="nav5">Shipping </a></li>
+                         <li><a href="users/sign_in" class="nav5">Sign In </a></li>
                          <li class="divider"></li>
                          <li><a href="contact.html" class="nav6">Contact Us</a></li>
                          <li class="divider"></li>
@@ -139,6 +139,11 @@
         
     
    </div><!-- end of left content -->
+
+<% if user_signed_in? %>
+<div id="devise_login">Welcome to Electronix. You are signed in as <%= current_user.email %> (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete
+%>)</div>
+<% end %>
    
    <%= yield %>
  
@@ -199,7 +204,11 @@
  
  
  
- 
+ <p class ="notice"><%= notice %></p>
+ <p class ="alert"><%= alert %></p>
+
+
+
     
     
    
@@ -264,7 +273,7 @@
         <div class="center_footer">
         Template name. All Rights Reserved 2008<br />
         <a href="http://csscreme.com/freecsstemplates/" title="free templates"><img src="assets/csscreme.jpg" alt="free templates" title="free templates" border="0" /></a><br />
-        <img src="images/payment.gif" alt="" title="" />
+        <img src="assets/payment.gif" alt="" title="" />
         </div>
         
         <div class="right_footer">

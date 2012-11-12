@@ -55,7 +55,9 @@
   <%= @camera_catalogue.stock_level %>
 </p>
 
-
+<% if session[:login]==1%>
 <%= link_to 'Edit', edit_camera_catalogue_path(@camera_catalogue) %> |
 <%= link_to 'Back', camera_catalogues_path %>
-
+<%else%>
+<a href="/cart/<%=camera_catalogue.id%>">Add to cart</a><br>
+<%end%>

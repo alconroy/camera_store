@@ -9,7 +9,7 @@ CameraStore::Application.routes.draw do
 
   root :to =>'camera_catalogues#index'
 
- 
+  match '/index' =>'camera_catalogues'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
