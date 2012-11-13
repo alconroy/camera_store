@@ -76,16 +76,16 @@
                          <li class="divider"></li>
                          <li><a href="#" class="nav4">My account</a></li>
                          <li class="divider"></li>
-                         <li><a href="users/sign_up" class="nav4">Sign Up</a></li>
+                         <li><a href="sign_up" class="nav4">Sign Up</a></li>
                          <li class="divider"></li>                         
-                         <li><a href="users/sign_in" class="nav5">Sign In </a></li>
+                         <li><a href="sign_in" class="nav5">Sign In </a></li>
                          <li class="divider"></li>
                          <li><a href="contact.html" class="nav6">Contact Us</a></li>
                          <li class="divider"></li>
                          <li class="currencies">Currencies
                          <select>
-                         <option>US Dollar</option>
                          <option>Euro</option>
+                         <option>Zloty</option>
                          </select>
                          </li>
                     </ul>

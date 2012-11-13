@@ -1,5 +1,10 @@
 CameraStore::Application.routes.draw do
-  devise_for :users
+  devise_for :users do
+   
+   get "/login" => "devise/sessions#new"
+   get "/register" => "devise/registrations#new"
+end                # devise login custom routes retrieved from http://stackoverflow.com/questions/3827011/devise-custom-routes-and-login-pages
+
 
   get "home/index"
 
@@ -7,7 +12,12 @@ CameraStore::Application.routes.draw do
 
   resources :camera_catalogues
 
-  root :to =>'camera_catalogues#index'
+  root :to =>'camera_catalogues#index'  
+
+  match 'camera_catalogues/:id' => 'camera_catalogues#show'
+
+  
+
 
  
 
